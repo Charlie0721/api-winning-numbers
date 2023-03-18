@@ -1,12 +1,11 @@
 export class Numbers {
 
-    numberOne: number;
-    numberTwo: number;
-    numberThree: number;
-    numberFour: number;
+    numberOne: string;
+    numberTwo: string;
+    numberThree: string;
     lotteryWinningNumber: string;
+    finalNumber: string;
     combinationOne: string;
     combinationTwo: string;
-    combinationThree: string;
-    combinationFour: string;
+
 }

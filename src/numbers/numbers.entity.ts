@@ -7,13 +7,12 @@ export class Number {
     lotteryWinningNumber: string;
     @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     createdAt: Date;
-    @Column({default: null})
+    @Column()
+    finalNumber: string
+    @Column()
     combinationOne: string
-    @Column({default: null})
+    @Column()
     combinationTwo: string
-    @Column({default: null})
-    combinationThree: string
-    @Column({default: null})
-    combinationFour: string
+  
 
 }
