@@ -9,8 +9,8 @@ export default class TypeOrmConfig {
 
 
             type: 'mysql',
-            host: configService.get('DB_HOST'),
-            port: configService.get('DB_PORT'),
+            host: configService.get('DATABASE_URL'),
+            //port: configService.get('DB_PORT'),
             username: configService.get('DB_USERNAME'),
             password: configService.get('DB_PASSWORD'),
             database: configService.get('DB_DATABASE'),
@@ -19,7 +19,10 @@ export default class TypeOrmConfig {
             retryDelay: 3000,
             autoLoadEntities: true,
             synchronize: true,
-            logging:true
+            ssl: {
+                rejectUnauthorized: false
+            },
+            logging:false
 
         }
     }
