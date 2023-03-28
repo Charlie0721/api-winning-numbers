@@ -146,7 +146,7 @@ export class NumbersService {
     async getResultsByWinnerNumber(page: number, limit: number, search: string) {
         const [number, total] = await this.numberRepository.findAndCount({
             where: {
-                lotteryWinningNumber: ILike(`${search}%`)
+                lotteryWinningNumber: ILike(`%${search}%`)
             },
             skip: (page - 1) * limit,
             take: limit
